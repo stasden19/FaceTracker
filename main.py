@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 from yolo_segmentation import YOLOSegmentation
-video = cv2.VideoCapture('video_2023-12-24_13-34-47.mp4')
-ys = YOLOSegmentation(r"J:\AllProjectsPython\FaceTracker\runs\segment\train5\weights\best.pt")
+video = cv2.VideoCapture('video.mp4')
+ys = YOLOSegmentation(r"model.pt")
 while video.isOpened():
     ret, img = video.read()
     img = cv2.resize(img, (640, 640))
